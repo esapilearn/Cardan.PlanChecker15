@@ -11,6 +11,7 @@ using Prism.Modularity;
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using ESAPIX.Constraints;
 
 namespace Cardan.PlanChecker15
 {
@@ -30,6 +31,7 @@ namespace Cardan.PlanChecker15
         protected override void OnStartup(StartupEventArgs e)
         {
             _args = e.Args;
+            _args = ContextIO.ReadArgsFromFile(@"C:\Users\cwalker\Desktop\context.txt");
             base.OnStartup(e);
         }
 
